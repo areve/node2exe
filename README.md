@@ -6,11 +6,11 @@ is to allow node and a javascript (or many) to be distributed as one exe file.
 It's basically a self extractor that starts running a node script as soon as
 it's extracted.
 
-The I slightly modified [node.cc](node-v0.10.26/src/node.cc) and added
-[node2exe.h](node-v0.10.26/src/node2exe.h) to the same src folder. Then I built
+The I slightly modified node.cc [node.cc.patch](node.cc.patch) and added
+[node2exe.h](node2exe.h) to the same src folder. Then I built
 with `vcbuild.bat nosign` (I'm using VS2010 Express although other versions
 should work). That produces node.exe which I then rename to
-[node2exe.exe](node2exe.exe)
+[node2exe.exe](raw/master/node2exe.exe)
 
 Once built node2exe.exe behaves almost identically to node.exe. The difference
 is that when it runs it looks through itself for a 22 character delimiter, if
@@ -39,7 +39,7 @@ Default temp folders will be in **%TEMP%\node2exe\nnnnnnnnn** which is usually
 deleted if the program finishes or if the console is closed,
 CTRL+C is pressed etc.
 
-The delimiter file [node2exe.delimiter](node2exe.delimiter) contains
+The delimiter file contains
 `"*/\r\n*/'"NODE2EXE\r\n*/\r\n"` a string delimiter of 22 bytes that can
 never occur in a valid javascript file. The delimiter
 can be created with a batch file as follows:
@@ -60,8 +60,8 @@ an executable with node2exe no compliers are required. It is Windows only at
 present, I'm sure it could be made to work on other platforms too but that's
 beyond my current requirements.
 
-## Configuration
-----------------
+Configuration
+-------------
 Config keys are understood by the node2exe program in two ways. They can be
 found in the config section or passed as command line arguments.
 Each line in the config section with an equals sign (=) in it will be interpreted
@@ -75,8 +75,8 @@ section. If a config key is present more than once the first entry will be used.
 Config keys are case insensitve. Little validation on config keys is done, if
 you use invalid keys they will be ignored.
 
-### Config keys
----------------
+Config keys
+-----------
 Defaults are indicated in bold.
 
   * cleanup - (none|**normal**|force) delete files and directories created on complete.
@@ -93,8 +93,8 @@ Defaults are indicated in bold.
   * execute - (**true**|false) if false then no execution of a node script will be done after unpacking
   * overwrite = (true|**false**) if false then the program will not overwrite in the way files
 
-### Environment Variables
--------------------------
+Environment Variables
+---------------------
 Environment variables can be used in some of the config settings only, node2exe
 sets the following during execution time for you to make use of.
   CD - the current working directory
