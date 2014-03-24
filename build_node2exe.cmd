@@ -24,6 +24,8 @@ call vcbuild.bat nosign
 
 cd /d %~dp0
 copy /y node-v0.10.26\Release\node.exe node2exe.exe
+hg diff -r 0 node-v0.10.26\src\node.cc > node.cc.patch
+copy /y node-v0.10.26\src\node2exe.h node2exe.h
 
 
 
