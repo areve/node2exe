@@ -1,4 +1,4 @@
-node2Exe
+node2exe
 ========
 
 node2exe is a modified version of node.js's node.exe for windows. The purpose
@@ -10,7 +10,7 @@ The I slightly modified node.cc [node.cc.patch](node.cc.patch) and added
 [node2exe.h](node2exe.h) to the same src folder. Then I built
 with `vcbuild.bat nosign` (I'm using VS2010 Express although other versions
 should work). That produces node.exe which I then rename to
-[node2exe.exe](raw/master/node2exe.exe)
+[node2exe.exe](node2exe.exe)
 
 Once built node2exe.exe behaves almost identically to node.exe. The difference
 is that when it runs it looks through itself for a 22 character delimiter, if
@@ -97,8 +97,8 @@ Environment Variables
 ---------------------
 Environment variables can be used in some of the config settings only, node2exe
 sets the following during execution time for you to make use of.
-  CD - the current working directory
-  NODE2EXE_NANODATE - start up time in nanoseconds
-  NODE2EXE_ISODATE - date in iso string format
-  NODE2EXE_DEST - the temp path once it's been resolved, trailing backslashes will have been removed
-  NODE2EXE_SCRIPT - full path to the script that will be executed
+  * CD - the current working directory
+  * NODE2EXE_NANODATE - start up time in nanoseconds
+  * NODE2EXE_ISODATE - date in iso string format
+  * NODE2EXE_DEST - the temp path once it's been resolved, trailing backslashes will have been removed
+  * NODE2EXE_SCRIPT - full path to the script that will be executed
