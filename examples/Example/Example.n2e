@@ -1,0 +1,7 @@
+=any line that starts with equals or does not contain equals is ignored
+=unrecognised keys are loaded but never used e.g. #cleanup
+temp=%CD%\mytemp\
+#execute=false
+#cleanup=none
+name_0=foobar\hello.js
+name_1=foobar\something.abc

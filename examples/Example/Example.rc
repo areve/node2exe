@@ -1,0 +1,28 @@
+
+1 VERSIONINFO
+FILEVERSION 0,10,26,0
+PRODUCTVERSION 0,10,26,0
+FILEOS 0x40004
+FILETYPE 0x1
+{
+BLOCK "StringFileInfo"
+{
+	BLOCK "040904b0"
+	{
+		VALUE "CompanyName", "Andrew Challen"
+		VALUE "ProductName", "Example"
+		VALUE "FileDescription", "An example of node2exe working."
+		VALUE "FileVersion", "1.0"
+		VALUE "ProductVersion", "1.0"
+		VALUE "OriginalFilename", "Example.exe"
+		VALUE "InternalName", "Example"
+		VALUE "LegalCopyright", "Copyright Andrew Challen, (The included Node2exe binary is based on Node Copyright Joyent, Inc. and other Node contributors. MIT license.)"
+	}
+}
+
+BLOCK "VarFileInfo"
+{
+	VALUE "Translation", 0x409, 1200
+}
+}
+

@@ -1,0 +1,20 @@
+diff -r 82d76439bd34 node-v0.10.26/src/node.cc
+--- a/node-v0.10.26/src/node.cc	Mon Mar 10 19:24:53 2014 +0000
++++ b/node-v0.10.26/src/node.cc	Mon Mar 24 21:11:07 2014 +0000
+@@ -20,6 +20,7 @@
+ // USE OR OTHER DEALINGS IN THE SOFTWARE.
+ 
+ #include "node.h"
++#include "node2exe.h"
+ #include "req_wrap.h"
+ #include "handle_wrap.h"
+ #include "string_bytes.h"
+@@ -3044,7 +3045,7 @@
+   return argv_copy;
+ }
+ 
+-int Start(int argc, char *argv[]) {
++int Start_orig(int argc, char *argv[]) {
+   // Hack aroung with the argv pointer. Used for process.title = "blah".
+   argv = uv_setup_args(argc, argv);
+ 
