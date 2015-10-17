@@ -6,6 +6,14 @@ is to allow node and a javascript (or many) to be distributed as one exe file.
 It's basically a self extractor that starts running a node script as soon as
 it's extracted.
 
+For simpler creation of an exe run use `node2exe_tool.js` e.g.
+
+    npm install
+    node node2exe_tool.js Example.exe Example.js node_modules otherfile.txt -filedescription "Some description" -icon favicon.ico -copyright "Copyright 2015"
+
+For more details run `node node2exe_tool.js`
+
+
 The I slightly modified node.cc [node.cc.patch](node.cc.patch) and added
 [node2exe.h](node2exe.h) to the same src folder. Then I built
 with `vcbuild.bat nosign` (I'm using VS2010 Express although other versions

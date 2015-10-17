@@ -1,0 +1,11 @@
+syntax: glob
+node_modules/
+gorc.exe
+Gorc.zip
+ResourceHacker.exe
+ResourceHacker.ini
+ResourceHacker.log
+hello.exe
+resource_hacker.zip
+upx.exe
+upx391w.zip

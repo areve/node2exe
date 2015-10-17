@@ -1,0 +1,19 @@
+{
+  "name": "node2exe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "node2exe_tool.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "adm-zip": "^0.4.7",
+    "lzma": "^2.2.2",
+    "tar-stream": "^1.2.2"
+  }
+}
