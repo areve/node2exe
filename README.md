@@ -57,7 +57,7 @@ can be created with a batch file as follows:
 	>> node2exe.delimiter echo */
 
 Once built you can change the file icon or version info if you want to with
-[Resource Hacker](http://www.angusj.com/resourcehacker/).
+[Resource Hacker](http://www.angusj.com/resourcehacker/) or [Resource Cracker](https://www.pelock.com/products/resource-cracker).
 [UPX](http://upx.sourceforge.net/) Can be used on the node2exe.exe before or
 after data is appended to the binary, in my experiments. The icon can only be
 changed before upx is done though. Or you could just recompile everything.
